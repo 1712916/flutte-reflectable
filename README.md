@@ -169,7 +169,7 @@ e.newInstance('', []) : get an instance of each type by call default constructor
 
 ### The result
 
-![Untitled](images/Untitled.png)
+<img src="images/Untitled.png"   height="300">
 
 # Apply with StoryBook
 
@@ -294,7 +294,8 @@ class ReflectableStoryBookWidget extends StatelessWidget {
 
 ### The result
 
-![Untitled](images/Untitled%201.png)
+<img src="images/Untitled%201.png" width="500" height="500">
+
 
 # Conclusion
 
