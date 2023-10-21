@@ -36,9 +36,13 @@ class SampleListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Widget by sample annotation')),
+      appBar: AppBar(title: const Text('Widget by sample annotation')),
       body: Column(
-        children: sampleWidget.annotatedClasses.map((e) => e.newInstance('', []) as Widget).toList(),
+        children: sampleWidget.annotatedClasses
+            .where((mirror) => !mirror.isAbstract)
+            .map((e) => e.newInstance('', []))
+            .whereType<Widget>()
+            .toList(),
       ),
     );
   }
