@@ -19,8 +19,8 @@ class ReflectableStoryBookWidget extends StatelessWidget {
       stories: sampleWidget.annotatedClasses
           .where((classMirror) => !classMirror.isAbstract)
           .map((e) => e.newInstance('', []))
-          .whereType<StoryBookName>()
-          .map((e) => Story(name: e.name, builder: (_) => e))
+          .whereType<Widget>()
+          .map((e) => Story(name: e is StoryBookName ? e.name : defaultName, builder: (_) => e))
           .toList(),
     );
   }
