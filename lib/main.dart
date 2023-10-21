@@ -6,6 +6,7 @@ import 'package:flutter_reflectable/sample_annotation.dart';
 import 'package:flutter_reflectable/widgets/widget.dart';
 
 import 'main.reflectable.dart';
+import 'reflectable_story_book/reflectable_story_book_widget.dart';
 
 void main() {
   initializeReflectable();
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // useMaterial3: true,
       ),
-      home: SampleListWidget(),
+      home: const ReflectableStoryBookWidget(),
     );
   }
 }

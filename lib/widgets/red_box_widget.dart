@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_reflectable/reflectable_story_book/story_book_mixin.dart';
 import 'package:flutter_reflectable/sample_annotation.dart';
 
 class RedBoxWidget extends StatelessWidget {
@@ -18,7 +19,7 @@ class RedBoxWidget extends StatelessWidget {
 }
 
 @sampleWidget
-class SampleRedBoxWidget extends StatelessWidget {
+class SampleRedBoxWidget extends StatelessWidget with StoryBookName {
   const SampleRedBoxWidget({super.key});
 
   @override
@@ -28,4 +29,7 @@ class SampleRedBoxWidget extends StatelessWidget {
       width: 100,
     );
   }
+
+  @override
+  String get name => 'box/red-box';
 }

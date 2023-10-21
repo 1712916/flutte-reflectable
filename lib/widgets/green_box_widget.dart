@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_reflectable/reflectable_story_book/story_book_mixin.dart';
 import 'package:flutter_reflectable/sample_annotation.dart';
 
 class GreenBoxWidget extends StatelessWidget {
@@ -18,7 +19,7 @@ class GreenBoxWidget extends StatelessWidget {
 }
 
 @sampleWidget
-class SampleGreenBoxWidget extends StatelessWidget {
+class SampleGreenBoxWidget extends StatelessWidget with StoryBookName {
   const SampleGreenBoxWidget({super.key});
 
   @override
@@ -28,4 +29,7 @@ class SampleGreenBoxWidget extends StatelessWidget {
       width: 100,
     );
   }
+
+  @override
+  String get name => 'box/green-box';
 }
